@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="Chatbotstyle.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+    crossorigin="anonymous"
+    src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"
+  ></script>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <h3>CHATBOT</h3>
+        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Team</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--- Image Slider -->
+<div id="slides"  class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/test1.jpg">
+        </div>
+        <div class="carousel-item">
+            <img src="/test.jpg">
+        </div>
+    </div>
+</div>
+
+<!--- Jumbotron -->
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead">Our Chatbot will be able to suggest and recommend products and services for a user based on current or previous interactions</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg" onclick="togglePopup()" >Chat</button></a>
+        </div>
+    </div>
+</div>
+
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="display-4"> Build with ease.</h1>
+        </div>
+        <hr>
+        <div class="col-12">
+            <p class="lead">Azure Bot Service is Microsoft's artificial intelligence (AI) chatbot offered as a service on the Azure cloud service marketplace. ... The platform gives bot developers a software development kit (SDK) and tools to add bots to sites in the form of Azure Bot Builder.</p>
+        </div>
+    </div>
+</div>
+
+<!--- Three Column Section -->
+
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+    <div class="row padding">
+        <div class=" col-lg-6">
+            <h2>If you want buy it...</h2>
+            <p>Buying a home remotely is becoming increasingly common these days.
+             It has been standard practice for some time in the real estate world for sellers to skip the home closing by pre-signing paperwork and having sale proceeds wired directly to a bank account, but now the entire process can be done remotely—by buyers as well as sellers.</p>
+             <br>
+             <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="/desk.png" class="img-fluid">
+            </div>
+    </div>
+</div>
+
+<!--- Fixed background -->
+
+
+<!--- Emoji Section -->
+
+  
+<!--- Meet the team -->
+
+
+<!--- Cards -->
+
+
+<!--- Two Column Section -->
+
+
+<!--- Connect -->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h2>Connect</h2>
+        </div>
+        <div class="col-12 social padding">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- chatbot -->
+<!-- <button>Ngr Chatbot</button> -->
+<div style="text-align: right;">
+<div class="chat_icon"  onclick="return showHideChatbot();">
+    
+
+
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="robot" class="svg-inline--fa fa-robot fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="orange" d="M32,224H64V416H32A31.96166,31.96166,0,0,1,0,384V256A31.96166,31.96166,0,0,1,32,224Zm512-48V448a64.06328,64.06328,0,0,1-64,64H160a64.06328,64.06328,0,0,1-64-64V176a79.974,79.974,0,0,1,80-80H288V32a32,32,0,0,1,64,0V96H464A79.974,79.974,0,0,1,544,176ZM264,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,264,256Zm-8,128H192v32h64Zm96,0H288v32h64ZM456,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,456,256Zm-8,128H384v32h64ZM640,256V384a31.96166,31.96166,0,0,1-32,32H576V224h32A31.96166,31.96166,0,0,1,640,256Z"></path></svg>
+
+      <div id="chatBotId" class="hide popuptext">
+  
+        <iframe src="chat.html" style="height: 105%; width: 60%;"></iframe>
+      </div>
+    </div>  
+
+  
+  </div>
+
+
+
+  <script>
+    function showHideChatbot(){
+        var x = document.getElementById("chatBotId");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } 
+        else {
+          x.style.display = "none";
+         }
+      }
+</script>
+
+<style>
+  .hide{
+    display: none;
+  }
+
+  /* POPup */
+
+.chat_icon{
+    position:fixed;
+    right: 30px;
+    bottom: 0;
+    font-size:80px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hide{
+    position:fixed;
+    right:80px;
+    bottom: 180px;
+     width: 40%;
+    height: 60%;
+}
+</style>
+<!--- Footer -->
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h3>Demo</h3>
+                <hr class="light">
+                <p>000-987-123</p>
+                <p>email@gmail.com</p>
+                <p>100 Street Name</p>
+                <p>city, state, 0000</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Hours</h5>
+                <hr class="light">
+                <p>Monday: 10am - 7pm</p>
+                <p>Saturday: 10am - 4pm</p>
+                <p>Sunday: closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Service Area</h5>
+                <hr class="light">
+                <p>City, State, 123</p>
+                <p>City, State, 123</p>
+                <p>City, State, 123</p>
+                <p>City, State, 123</p>
+            </div>
+            <div class="col-12">
+                <hr class="light">
+                <h5>&copy; website.com</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
